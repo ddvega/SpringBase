@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "d8f4caf1-db81-4f28-b5b5-3a50ad8c0764",
+		"name": "SpringBase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add user (david)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"ddvega\",\n    \"password\":\"boludo\",\n    \"role\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/new",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add user (robert)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"rrobert\",\n    \"password\":\"volo\",\n    \"role\":\"user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/new",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate get JWT Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"ddvega\",\n    \"password\":\"boludo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/authenticate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user from token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "welcome home!",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete rrobert Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/7",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZHZlZ2EiLCJleHAiOjE2NTUwOTUzOTIsImlhdCI6MTY1NTA3NzM5Mn0.ULkjYKk4fc6mu14a-M1lbaMZ5um1ibIfwz9fa7f5wUQoEhDctB5jrgrHkPLqITEsn-TVPVlU9IitsZ6trmiuCA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
